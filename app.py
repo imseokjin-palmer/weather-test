@@ -39,10 +39,10 @@ elif st.session_state.step == 'chat':
     st.markdown("### 2 페이지")
     
     # 교수님 요청 프레이밍 메시지 (배경색으로 강조)
-    if st.session_state.group == "Positive":
-        st.success("✨ **AI에게 날씨 및 여행 정보를 물어보면 빠르게 필요한 정보를 얻을 수 있습니다.**")
-    else:
-        st.error("⚠️ **AI에게 날씨 및 여행 정보를 묻지 않으면 필요한 정보를 확인할 수 없습니다.**")
+    #if st.session_state.group == "Positive":
+    #    st.success("✨ **AI에게 날씨 및 여행 정보를 물어보면 빠르게 필요한 정보를 얻을 수 있습니다.**")
+    #else:
+    #    st.error("⚠️ **AI에게 날씨 및 여행 정보를 묻지 않으면 필요한 정보를 확인할 수 없습니다.**")
 
     with st.container(border=True):
         st.write("당신은 3박 4일 여행을 계획하고 있습니다.")
@@ -105,3 +105,4 @@ elif st.session_state.step == 'survey':
         for key in list(st.session_state.keys()):
             del st.session_state[key]
         st.rerun()
+
