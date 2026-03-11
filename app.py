@@ -103,10 +103,11 @@ elif st.session_state.step == 'survey':
     
     st.link_button("🚀 설문 참여하고 완료하기", final_form_url, use_container_width=True)
     
-    if st.button("처음으로 돌아가기"):
-        for key in list(st.session_state.keys()):
-            del st.session_state[key]
-        st.rerun()
+    #if st.button("처음으로 돌아가기"):
+    #    for key in list(st.session_state.keys()):
+    #        del st.session_state[key]
+    #    st.rerun()
+
 
 
 
