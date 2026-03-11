@@ -21,13 +21,14 @@ if 'group' not in st.session_state:
 
 # --- [1페이지] 도입 안내 화면 ---
 if st.session_state.step == 'intro':
-    st.markdown("### 1 페이지")
+    st.markdown("### 📋 연구 참여 안내")   
     with st.container(border=True):
         st.write("")
         st.write("안녕하세요.")
         st.write("본 설문은 생성형 AI가 제공하는 정보의 표현 방식이 사용자 인식과 평가에 어떤 영향을 미치는지 알아보기 위한 연구입니다. 방금 경험하신 AI 서비스에 대해 느낀 점을 바탕으로 응답해 주시면 됩니다. 정답은 없으며, 솔직한 의견이 가장 중요합니다.")
         st.write("응답 내용은 연구 목적 외에는 사용되지 않으며, 모든 정보는 익명으로 처리됩니다.")
         st.write("참여해 주셔서 감사합니다.")
+        st.write("연구자: 서울시립대학교 경영학부 강사 김준환 / 한세대학교 교양학부 임석진 교수")
         st.write("")
         
         if st.button("시작하기", use_container_width=True):
@@ -36,13 +37,13 @@ if st.session_state.step == 'intro':
 
 # --- [2페이지] AI 대화 화면 ---
 elif st.session_state.step == 'chat':
-    st.markdown("### 2 페이지")
+    st.markdown("### ✈️ AI 여행 계획 대화형 서비스")  
     
     # 교수님 요청 프레이밍 메시지 (배경색으로 강조)
     if st.session_state.group == "Positive":
-        st.success("✈️ **여행계획 AI 비서 서비스**")
+        st.success("🗺️ **어디로든 떠날 준비 되셨나요? 지금 바로 AI와 함께 설레는 여행 지도를 그려보세요!**") 
     else:
-        st.error("✈️ **여행 계획 AI 비서 서비스**")
+        st.error("🗺️ **어디로든 떠날 준비 되셨나요? 지금 바로 AI와 함께 설레는 여행 지도를 그려보세요!**")
 
     with st.container(border=True):
         st.write("당신은 3박 4일 여행을 계획하고 있습니다.")
@@ -107,6 +108,7 @@ elif st.session_state.step == 'survey':
     #    for key in list(st.session_state.keys()):
     #        del st.session_state[key]
     #    st.rerun()
+
 
 
 
